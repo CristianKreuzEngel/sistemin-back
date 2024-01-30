@@ -1,0 +1,20 @@
+COMANDO LARAVEL 
+
+*** TODOS OS COMANDOS DEVEM SER FEITO COM O TERMINAL DENTRO DA PASTA
+                                DO PROJETO *** 
+
+
+--- ABRIR UM SERVER LOCAL ---
+Comando:
+    php artisan serve
+
+link: 127.0.0.1:8000
+
+--- CRIAR UM CONTROLLER ---
+Comando:
+    php artisan make:controller nomeDoController
+Ex:
+    php artisan make:controller joguenhosController
+
+OBS: Não pode ter espaços entre as palavras no nome do controller
+
