@@ -18,3 +18,5 @@ Ex:
 
 OBS: Não pode ter espaços entre as palavras no nome do controller
 
+--- Criar Migration ---
+
