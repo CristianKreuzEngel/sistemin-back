@@ -1,0 +1,21 @@
+:root{
+    --primary-color: #000;
+    --secundary-color: #FFF;
+    --text-color-dark: #000;
+    --text-color-light: #fff;
+    --icon-color: #F3F3F3;
+}
+/* Mini framework */
+.max-widht {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.bg {
+    background: url('#') no-repeat;
+    background-size: cover;
+    height: auto;
+}
+body {
+    background-color: #000;
+}
