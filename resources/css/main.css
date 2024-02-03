@@ -16,3 +16,6 @@
     background-size: cover;
     height: auto;
 }
+body {
+    background-color: #000;
+}

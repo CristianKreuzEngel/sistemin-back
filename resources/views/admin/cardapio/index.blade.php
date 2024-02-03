@@ -1,4 +1,4 @@
-@extends('layout.app')
+@extends('layouts.app')
 
 @section('css')
     <link rel="stylesheet" href="/resources/css/default.css">

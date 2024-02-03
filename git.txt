@@ -62,3 +62,4 @@ git checkout -b nomeDaBranch
 Após isso damos o seguinte comando:
 
 git pull origin nomeDaBranch
+

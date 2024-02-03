@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\loginController;
+use App\Http\Controllers\mainController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,6 +15,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+//Rota página inicial
+route::get('/', [mainController::class, 'index'] );
 
 // ROTA LOGIN
 route::get('/login', [loginController::class, 'index']);
+
+
+//Rota painel
+route::get ('/painel', [mainController::class, 'painel']);
+
+
+//Rota cardapio
+route::get('/cardapio', [mainController::class, 'cardapio']);
