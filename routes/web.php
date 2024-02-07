@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 //Rota página inicial
 route::get('/', [mainController::class, 'index'] );
 
-// ROTA LOGIN
+//Rota login
 route::get('/login', [loginController::class, 'index']);
 
 
