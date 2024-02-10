@@ -3,7 +3,6 @@
 @section('title', 'Página inicial')
 
 @section('content')
-
     <!--Aqui começa o home-->
     <header class="max-width bg" id="home">
         <div class="container">

@@ -1,12 +1,5 @@
 @import url('https://fonts.googleapis.com/css2? family= Poppins:ital,wght@0,300;0,400;1,900 & display=swap');
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
-
 /* Mini Framework */
 
 html,
@@ -14,7 +7,7 @@ body {
     height: 100%;
 }
 
-.max-width {
+.max-widht {
     width: 100%;
     min-height: 100vh;
 }
@@ -437,7 +430,7 @@ footer .container p {
 
 /* Responsividade */
 
-@media screen and (max-width:922px) {
+@media screen and (max-widht:922px) {
 
     /* Tamanho de fontes */
 
@@ -459,7 +452,7 @@ footer .container p {
 
 }
 
-@media screen and (max-width:740px){
+@media screen and (max-widht:740px){
 
     /* desktop-menu */
 
@@ -589,7 +582,7 @@ footer .container p{
 
 }
 
-@media screen and (max-width: 648px){
+@media screen and (max-widht: 648px){
 
     .logo{
         width: 110px;
