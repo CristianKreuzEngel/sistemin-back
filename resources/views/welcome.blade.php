@@ -5,6 +5,7 @@
 @endsection
 @section('title', 'Página inicial')
 @section('header')
+<!--Aqui começa o home-->
 <header class="max-width bg" id="home">
         <div class="container">
             <div class="menu">
@@ -32,7 +33,7 @@
             </div>
             <div class="call">
                 <div class="left">
-                    <img src="image/pizzaD.png" alt="">
+                    <img src="{{ asset('assets/img/pizzaD.png')}}" alt="">
                 </div>
                 <div class="rigth">
                     <h1 class="color-laranja text-gd">Pizzaria Degustar</h1>
@@ -45,7 +46,7 @@
     </header>
 @endsection
 @section('content')
-    <!--Aqui começa o home-->
+    
     
 
      <!--Aqui começa o about-->
@@ -61,7 +62,7 @@
                        <button>Saiba Mais</button>
                 </div>
                 <div class="right">
-                    <img src="image/pizzaD.png" alt="">
+                    <img src="{{ asset('assets/img/pizzaD.png')}}" alt="">
                 </div>
             </div>
         </div>
@@ -108,19 +109,19 @@
                 </div>
                 <div class="down">
                     <div class="box">
-                        <img src="image/pizzaD.png" alt="">
+                        <img src="{{ asset('assets/img/pizzaD.png')}}" alt="">
                         <h2 class="color-laranja">Pizza de Pepperoni</h2>
                         <p class="text-md">Pizza deliciosa</p>
                         <p>R$ 45,99</p>
                     </div>
                     <div class="box">
-                        <img src="image/pizzaD.png" alt="">
+                        <img src="{{ asset('assets/img/pizzaD.png')}}" alt="">
                         <h2 class="color-laranja">Pizza de Pepperoni</h2>
                         <p class="text-md">Pizza deliciosa</p>
                         <p>R$ 45,99</p>
                     </div>
                     <div class="box">
-                        <img src="image/pizzaD.png" alt="">
+                        <img src="{{ asset('assets/img/pizzaD.png')}}" alt="">
                         <h2 class="color-laranja">Pizza de Pepperoni</h2>
                         <p class="text-md">Pizza deliciosa</p>
                         <p>R$ 45,99</p>
@@ -142,7 +143,7 @@
                </p>
             </div>
             <div class="right">
-                <img src="image/pizzaD.png" alt="">
+                <img src="{{ asset('assets/img/pizzaD.png')}}" alt="">
             </div>
             </div>
         </div>

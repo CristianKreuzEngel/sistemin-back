@@ -36,7 +36,7 @@
                     </p>
                 </form>
                 <form class="form form-register">
-                    <h2 class="form-title">Criar Conta</h2>
+                    <!-- <h2 class="form-title">Criar Conta</h2>
                     <div class="form-social">
                         <a href="#" class="social-icon">
                             <i class="fab fa-facebook-f"></i>
@@ -47,7 +47,7 @@
                         <a href="#" class="social-icon">
                             <i class="fab fa-linkedin-in"></i>
                         </a>
-                    </div>
+                    </div> -->
                     <p class="form-text">ou cadastre seu email</p>
                     <div class="form-input-container">
                         <input type="text" class="form-input" placeholder="Nome">
