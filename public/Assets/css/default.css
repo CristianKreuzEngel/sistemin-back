@@ -11,6 +11,21 @@ html,
 body {
     height: 100%;
 }
+/*Scrollbar Personalizada*/
+
+body::-webkit-scrollbar {
+    width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+    background: #fff;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #2b2b2b;
+    border-radius: 20px;
+    border: 1px solid #fff;
+}
 h1{
     font-weight: 800;
     font-size: 1.8rem;
@@ -67,20 +82,4 @@ button:hover {
     border: 1px solid #91171a;
     background: #fff;
     color: #91171a;
-}
-
-/*Scrollbar Personalizada*/
-
-body::-webkit-scrollbar {
-    width: 12px;
-}
-
-body::-webkit-scrollbar-track {
-    background: #fff;
-}
-
-body::-webkit-scrollbar-thumb {
-    background-color: #2b2b2b;
-    border-radius: 20px;
-    border: 1px solid #fff;
 }

@@ -1,10 +1,11 @@
 @extends('layouts.app')
-
+@section('head')
+<link rel="stylesheet" href="{{ asset('assets/css/institucional/styles.css') }}">
+<link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+@endsection
 @section('title', 'Página inicial')
-
-@section('content')
-    <!--Aqui começa o home-->
-    <header class="max-width bg" id="home">
+@section('header')
+<header class="max-width bg" id="home">
         <div class="container">
             <div class="menu">
                 <div class="logo"></div>
@@ -42,6 +43,10 @@
             </div>
         </div>
     </header>
+@endsection
+@section('content')
+    <!--Aqui começa o home-->
+    
 
      <!--Aqui começa o about-->
 
@@ -142,15 +147,15 @@
             </div>
         </div>
       </section>
-
-      <!--Aqui começa o footer-->
-
-        <footer>
+@endsection
+@section('footer')
+  <!--Aqui começa o footer-->
+  <footer>
             <div class="container">
                 <img src="image/certa.png" alt="">
-                <p class="text-pq">Copyright 2023  <span class="color-laranja">ONE DIAMOND</span> All Rights Reserved</p>
+                <p class="text-pq">Copyright 2023  <span class="color-laranja">Pizzaria Degustar</span> All Rights Reserved</p>
                 <p class="text-pq">Tel: (49) 98878-6633</p>
+                <p class="text-pq">Desenvolvido por KirlianByte</p>
             </div>
         </footer>
-
 @endsection
