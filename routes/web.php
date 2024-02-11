@@ -28,3 +28,6 @@ route::get ('/painel', [mainController::class, 'painel']);
 
 //Rota cardapio
 route::get('/cardapio', [mainController::class, 'cardapio']);
+
+//Rota bebida
+route::get('/bebida' ,[mainController::class,'bebida']);
