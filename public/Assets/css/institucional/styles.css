@@ -1,24 +1,15 @@
-@import url('https://fonts.googleapis.com/css2? family= Poppins:ital,wght@0,300;0,400;1,900 & display=swap');
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+/* variaveis de cores do formulario */
+:root{
+    --primary-color: #000;
+    --secundary-color: #FFF;
+    --text-color-dark: #000;
+    --text-color-light: #fff;
+    --icon-color: #F3F3F3;
 }
-
-/* Mini Framework */
-
-html,
-body {
-    height: 100%;
-}
-
 .max-widht {
     width: 100%;
     min-height: 100vh;
 }
-
 .bg {
     background: url('#') no-repeat;
     background-size: cover;
@@ -33,7 +24,6 @@ body {
     justify-content: center;
     min-height: 100vh;
 }
-
 /* Menu */
 
 .menu {
@@ -46,7 +36,7 @@ body {
 }
 
 .logo {
-    background: url('image/certa.png') no-repeat;
+    background: url('/assets/img/logo.jpeg') no-repeat;
     background-size: contain;
     width: 150px;
     height: 80px;
@@ -123,25 +113,6 @@ img {
     height: 100%;
     object-fit: cover;
 }
-
-/* botao */
-
-button {
-    padding: 10px 20px;
-    background: #91171a;
-    color: #fff;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    transition: 0.3s ease;
-}
-
-button:hover {
-    border: 1px solid #91171a;
-    background: #fff;
-    color: #91171a;
-}
-
 /* content */
 
 .content {
@@ -261,24 +232,6 @@ button:hover {
     padding: 5px 10px;
     background: #2b2b2b;
 }
-
-/*Scrollbar Personalizada*/
-
-body::-webkit-scrollbar {
-    width: 12px;
-}
-
-body::-webkit-scrollbar-track {
-    background: #fff;
-}
-
-body::-webkit-scrollbar-thumb {
-    background-color: #2b2b2b;
-    border-radius: 20px;
-    border: 1px solid #fff;
-}
-
-
 /* home */
 
 #home .container {

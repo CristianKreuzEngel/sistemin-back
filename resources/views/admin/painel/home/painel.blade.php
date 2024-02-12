@@ -1,5 +1,8 @@
 @extends('layouts.app')
 
+@section('head')
+ <link href="{{ asset('assets/css/painel/styles.css')}}" rel="stylesheet">
+@endsection
 
 @section('title', 'Painel Administrativo')
 
@@ -145,22 +148,22 @@
                 <h2>Novos Usuarios</h2>
                 <div class="user-list">
                     <div class="user">
-                        <img src="image/profile-2.jpg">
+                        <img src="{{asset('assets/img/profile-2.jpg')}}">
                         <h2>João</h2>
                         <p>54 Min Ago</p>
                     </div>
                     <div class="user">
-                        <img src="image/profile-3.jpg">
+                        <img src="{{asset('assets/img/profile-3.jpg')}}">
                         <h2>Amilton</h2>
                         <p>3 Hours Ago</p>
                     </div>
                     <div class="user">
-                        <img src="image/profile-4.jpg">
+                        <img src="{{asset('assets/img/profile-4.jpg')}}">
                         <h2>Luiz</h2>
                         <p>6 Hours Ago</p>
                     </div>
                     <div class="user">
-                        <img src="image/plus.png">
+                        <img src="{{asset('assets/img/plus.png')}}">
                         <h2>Mais</h2>
                         <p>Novo Usuario</p>
                     </div>
@@ -213,7 +216,7 @@
                         <small class="text-muted">Admin</small>
                     </div>
                     <div class="profile-photo">
-                        <img src="images/profile-1.jpg">
+                        <img src="{{asset('assets/img/profile-1.jpg')}}">
                     </div>
                 </div>
 
@@ -222,7 +225,7 @@
 
             <div class="user-profile">
                 <div class="logo">
-                    <img src="image/logo.png">
+                    <img src="{{asset('assets/img/logo.jpeg')}}">
                     <h2>Pizzaria Degustar</h2>
                 </div>
             </div>
@@ -288,4 +291,8 @@
 
 
     </div>
+@endsection
+@section('script')
+<script src="/assets/js/orders.js"></script>
+<script src="/assets/js/index.js"></script>
 @endsection

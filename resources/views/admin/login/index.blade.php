@@ -1,71 +1,78 @@
 @extends('layouts.app')
 @section('head')
+<link  href="{{ asset('assets/css/login/style.css') }}" rel="stylesheet">
+<script src="https://kit.fontawesome.com/324b71f187.js" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;700;900&display=swap" rel="stylesheet">
+<script src="{{asset('assets/js/login.js')}}" defer></script>
 @endsection
-@section('title', 'Entre')
-
+@section('title', 'Acesso')
 @section('content')
-<section class="container">
-        <header>Registro de Dados</header>
-        <form action="#" class="form">
-            <div class="input-box">
-                <label>Nome Completo</label>  
-                 <input type="text" placeholder="Confirmar Nome" required>
-            </div>
-
-            <div class="input-box">
-                <label>Email</label>  
-                 <input type="text" placeholder="Confirmar Email" required>
-            </div>
-
-            <div class="column">
-                <div class="input-box">
-                    <label>Telefone</label>  
-                     <input type="number" placeholder="Confirmar Telefone" required>
-                </div>
-
-                <div class="input-box">
-                    <label>Data de Nascimento</label>  
-                     <input type="date" placeholder="Confirmar Data de Nascimento" required>
-                </div>
-            </div>
-
-            <div class="gender-box">
-                <h3>Genero</h3>
-                <div class="gender-option">
-                  <div class="gender">
-                    <input type="radio" id="check-male" name="gender" checked>
-                    <label for="check-male">Masculino</label>
-                 </div>
-                 <div class="gender">
-                    <input type="radio" id="check-female" name="gender">
-                    <label for="check-female">Feminino</label>
-                 </div>
-                 <div class="gender">
-                    <input type="radio" id="check-other" name="gender">
-                    <label for="check-other">Outro</label>
-                 </div>
-                </div>
-            </div>
-
-            <div class="input-box addres">
-                <label>Endereço</label>  
-                 <input type="text" placeholder="Confirmar Rua do Endereço" required>
-                 <input type="text" placeholder="Confirmar Rua do Endereço linha 2" required>
-                 <div class="column">
-                    <div class="select-box">
-                        <select>
-                            <option hidden>Pais</option>
-                            <option>Brasil</option>
-                        </select>
+<main>
+        <div class="login-container" id="login-container">
+            <div class="form-container">
+                <form class="form form-login">
+                    <h2 class="form-title">Entrar com</h2>
+                    <!-- <div class="form-social">
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-google"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
                     </div>
-                 </div>
-            
-                 <input type="text" placeholder="Confirmar sua Cidade" required>
-                 <input type="text" placeholder="Confirmar seu Bairro" required>
-                 <input type="number" placeholder="Confirmar numero da casa ou apartamento" required>
+                    <p class="form-text">ou utilize sua conta</p> -->
+                    <div class="form-input-container">
+                        <input type="email" class="form-input" placeholder="Email">
+                        <input type="password" class="form-input" placeholder="Senha">
+                    </div>
+                    <a href="#" class="form-link">Esqueceu a senha?</a>
+                    <button type="button" class="form-button">Logar</button>
+                    <p class="mobile-text">
+                        Não tem conta?
+                        <a href="#" id="open-register-mobile">Registre-se</a>
+                    </p>
+                </form>
+                <form class="form form-register">
+                    <!-- <h2 class="form-title">Criar Conta</h2>
+                    <div class="form-social">
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-google"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div> -->
+                    <p class="form-text">ou cadastre seu email</p>
+                    <div class="form-input-container">
+                        <input type="text" class="form-input" placeholder="Nome">
+                        <input type="email" class="form-input" placeholder="Email">
+                        <input type="password" class="form-input" placeholder="Senha">
+                    </div>
+                    <button type="button" class="form-button">Cadastrar</button>
+                    <p class="mobile-text">
+                        Já tem conta?
+                        <a href="#" id="open-login-mobile">Login</a>
+                    </p>
+                </form>
             </div>
-
-            <button>Confirmar</button>
-        </form>
-    </section>
+            <div class="overlay-container">
+                <div class="overlay">
+                    <h2 class="form-title form-title-light">Já tem conta?</h2>
+                    <p class="form-text">Para entrar na nossa plataforma faça login com suas informações</p>
+                    <button class="form-button form-button-light" id="open-login">Entrar</button>
+                </div>
+                <div class="overlay">
+                    <h2 class="form-title form-title-light">Novo por aqui?</h2>
+                    <p class="form-text">Cadastre-se e comece a usar a nossa plataforma on-line</p>
+                    <button class="form-button form-button-light" id="open-register">Cadastrar</button>
+                </div>
+            </div>
+        </div>
+    </main>
 @endsection

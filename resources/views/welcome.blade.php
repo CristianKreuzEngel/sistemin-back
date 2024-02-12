@@ -1,11 +1,12 @@
 @extends('layouts.app')
-
+@section('head')
+<link rel="stylesheet" href="{{ asset('assets/css/institucional/styles.css') }}">
+<link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+@endsection
 @section('title', 'Página inicial')
-
-@section('content')
-
-    <!--Aqui começa o home-->
-    <header class="max-width bg" id="home">
+@section('header')
+<!--home-->
+<header class="max-width bg" id="home">
         <div class="container">
             <div class="menu">
                 <div class="logo"></div>
@@ -19,7 +20,7 @@
                     </ul>
                 </div>
 
-                <div class="mobile-menu" onclick="myfunction()">
+                <div class="mobile-menu" onclick="menuMobile()">
                     <i class="fa-solid fa-bars"></i>
                     <ul id="mylinks">
                         <li><a href="#home">Home</a></li>
@@ -32,7 +33,7 @@
             </div>
             <div class="call">
                 <div class="left">
-                    <img src="image/pizzaD.png" alt="">
+                    <img src="{{ asset('assets/img/pizzaD.png')}}" alt="">
                 </div>
                 <div class="rigth">
                     <h1 class="color-laranja text-gd">Pizzaria Degustar</h1>
@@ -43,8 +44,23 @@
             </div>
         </div>
     </header>
+    <script>
+        // Menu Mobile
+        function menuMobile(){
+            var x = document.getElementById("myLinks")
+            if(x.style.display === "block"){
+                x.style.display = "none"
+            }else{
+                x.style.display = "block"
+            }
+        }
+     </script>
+@endsection
+@section('content')
+    
+    
 
-     <!--Aqui começa o about-->
+     <!--about-->
 
      <section class="max-width bg" id="about">
         <div class="container">
@@ -57,13 +73,13 @@
                        <button>Saiba Mais</button>
                 </div>
                 <div class="right">
-                    <img src="image/pizzaD.png" alt="">
+                    <img src="{{ asset('assets/img/pizzaD.png')}}" alt="">
                 </div>
             </div>
         </div>
      </section>
 
-     <!--Aqui começa o service-->
+     <!--service-->
 
       <section class="max-width bg" id="service">
         <div class="container">
@@ -93,7 +109,7 @@
         </div>
       </section>
 
-      <!--Aqui começa o menu-->
+      <!--menu-->
 
       <section class="max-width bg" id="menu">
         <div class="container">
@@ -104,19 +120,19 @@
                 </div>
                 <div class="down">
                     <div class="box">
-                        <img src="image/pizzaD.png" alt="">
+                        <img src="{{ asset('assets/img/pizzaD.png')}}" alt="">
                         <h2 class="color-laranja">Pizza de Pepperoni</h2>
                         <p class="text-md">Pizza deliciosa</p>
                         <p>R$ 45,99</p>
                     </div>
                     <div class="box">
-                        <img src="image/pizzaD.png" alt="">
+                        <img src="{{ asset('assets/img/pizzaD.png')}}" alt="">
                         <h2 class="color-laranja">Pizza de Pepperoni</h2>
                         <p class="text-md">Pizza deliciosa</p>
                         <p>R$ 45,99</p>
                     </div>
                     <div class="box">
-                        <img src="image/pizzaD.png" alt="">
+                        <img src="{{ asset('assets/img/pizzaD.png')}}" alt="">
                         <h2 class="color-laranja">Pizza de Pepperoni</h2>
                         <p class="text-md">Pizza deliciosa</p>
                         <p>R$ 45,99</p>
@@ -126,7 +142,7 @@
         </div>
       </section>
 
-      <!--Aqui começa o about-->
+      <!--about-->
 
       <section class="max-width bg" id="contact">
         <div class="container">
@@ -138,20 +154,23 @@
                </p>
             </div>
             <div class="right">
-                <img src="image/pizzaD.png" alt="">
+                <img src="{{ asset('assets/img/pizzaD.png')}}" alt="">
             </div>
             </div>
         </div>
       </section>
-
-      <!--Aqui começa o footer-->
-
+@endsection
+@section('footer')
+  <!--footer-->
         <footer>
             <div class="container">
-                <img src="image/certa.png" alt="">
-                <p class="text-pq">Copyright 2023  <span class="color-laranja">ONE DIAMOND</span> All Rights Reserved</p>
+                <img src="{{ asset('assets/img/logo.jpeg')}}" alt="">
+                <p class="text-pq">Copyright 2023  <span class="color-laranja">Pizzaria Degustar</span> All Rights Reserved</p>
                 <p class="text-pq">Tel: (49) 98878-6633</p>
+                <p class="text-pq">Desenvolvido por KirlianByte</p>
             </div>
         </footer>
+@endsection
+@section('script')
 
 @endsection
