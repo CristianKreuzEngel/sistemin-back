@@ -5,7 +5,7 @@
 @endsection
 @section('title', 'Página inicial')
 @section('header')
-<!--Aqui começa o home-->
+<!--home-->
 <header class="max-width bg" id="home">
         <div class="container">
             <div class="menu">
@@ -20,7 +20,7 @@
                     </ul>
                 </div>
 
-                <div class="mobile-menu" onclick="myfunction()">
+                <div class="mobile-menu" onclick="menuMobile()">
                     <i class="fa-solid fa-bars"></i>
                     <ul id="mylinks">
                         <li><a href="#home">Home</a></li>
@@ -44,12 +44,23 @@
             </div>
         </div>
     </header>
+    <script>
+        // Menu Mobile
+        function menuMobile(){
+            var x = document.getElementById("myLinks")
+            if(x.style.display === "block"){
+                x.style.display = "none"
+            }else{
+                x.style.display = "block"
+            }
+        }
+     </script>
 @endsection
 @section('content')
     
     
 
-     <!--Aqui começa o about-->
+     <!--about-->
 
      <section class="max-width bg" id="about">
         <div class="container">
@@ -68,7 +79,7 @@
         </div>
      </section>
 
-     <!--Aqui começa o service-->
+     <!--service-->
 
       <section class="max-width bg" id="service">
         <div class="container">
@@ -98,7 +109,7 @@
         </div>
       </section>
 
-      <!--Aqui começa o menu-->
+      <!--menu-->
 
       <section class="max-width bg" id="menu">
         <div class="container">
@@ -131,7 +142,7 @@
         </div>
       </section>
 
-      <!--Aqui começa o about-->
+      <!--about-->
 
       <section class="max-width bg" id="contact">
         <div class="container">
@@ -150,13 +161,16 @@
       </section>
 @endsection
 @section('footer')
-  <!--Aqui começa o footer-->
-  <footer>
+  <!--footer-->
+        <footer>
             <div class="container">
-                <img src="image/certa.png" alt="">
+                <img src="{{ asset('assets/img/logo.jpeg')}}" alt="">
                 <p class="text-pq">Copyright 2023  <span class="color-laranja">Pizzaria Degustar</span> All Rights Reserved</p>
                 <p class="text-pq">Tel: (49) 98878-6633</p>
                 <p class="text-pq">Desenvolvido por KirlianByte</p>
             </div>
         </footer>
+@endsection
+@section('script')
+
 @endsection

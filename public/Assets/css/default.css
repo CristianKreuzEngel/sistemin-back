@@ -35,39 +35,15 @@ h2{
     font-weight: 600;
     font-size: 1.4rem;
 }
-
 h3{
     font-weight: 500;
     font-size: 0.87rem;
-}
-
-p{
-    color: var(--color-dark-variant);
-}
-
-b{
-    color: var(--color-dark);
-}
-
-/* parte que deixa o formulario inteiro centralizado e certo */
-main {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-main table tbody td{
-    height: 2.8rem;
-    border-bottom: 1px solid var(--color-light);
-    color: var(--color-dark-variant);
 }
 
 main table tbody tr:last-child td{
     border: none;
 }
 /* botao */
-
 button {
     padding: 10px 20px;
     background: #91171a;
@@ -77,9 +53,9 @@ button {
     cursor: pointer;
     transition: 0.3s ease;
 }
-
 button:hover {
     border: 1px solid #91171a;
     background: #fff;
     color: #91171a;
 }
+
