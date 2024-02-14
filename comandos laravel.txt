@@ -20,3 +20,17 @@ OBS: Não pode ter espaços entre as palavras no nome do controller
 
 --- Criar Migration ---
 
+Comando:
+    php artisan make:migration NomeMigration
+
+Ex:
+    php artisan make:migration create_tables_sistem
+
+OBS: Não pode ter espaços entre as palavras no nome da migration
+
+--- Executando Migration ---
+
+Comando:
+    php artisan migrate
+
+OBS:    Esse comanddo deve ser executado somente uma vez
