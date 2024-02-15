@@ -18,6 +18,12 @@
     --padding-1: 1.2rem;
 
     --box-shadow: 0 2rem 3rem var(--color-light);
+    
+    --primary-color: #000;
+    --secundary-color: #FFF;
+    --text-color-dark: #000;
+    --text-color-light: #fff;
+    --icon-color: #F3F3F3;
 }
 .dark-mode-variables{
     --color-background: #181a1e;
@@ -672,4 +678,157 @@ main .recent-orders a{
     .right-section .nav button span{
         font-size: 2rem;
     }
+}
+
+/* login painel */
+.form-button{
+    width: 140px;
+    height:40px;
+    border-style: none;
+    border-radius: 50px;
+    border: 2px solid #000;
+    background-color: transparent;
+    font-size: 1rem;
+    font-weight: 800;
+    color: #000;
+    cursor: pointer;
+    transition: .7s;
+}
+.form-button:hover{
+    background-color: #000;
+    color: #fff;
+    border-color: #000;
+}
+.form-container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+.form-input-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-input{
+    width: 300px;
+    height: 40px;
+    padding: 10px 20px;
+    border-style: none;
+    background-color: var(--icon-color);
+}
+.form-title{
+    font-size: 3rem;
+    font-weight: 400;
+}
+.form {
+    height: 100%;
+    /* width: 50%; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--secundary-color);
+    padding: 55px 0;
+    transition: 1s;
+}
+
+.login-container.move .form-login{
+    transform: translateX(100%);
+}
+
+.login-container.move .form-register{
+    transform: translateX(0%);
+    z-index: 1;
+    opacity: 1;
+}
+
+@media (max-width:768px){
+    .form{
+        width: 100%;
+        justify-content: space-evenly;
+    }
+    .login-container.move .form-register{
+        transform: translateX(0%);
+    }
+
+}
+.login-container{
+    position: relative;
+    height: 480px;
+    width: 480px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px #A0A0A0;
+    overflow: hidden;
+}
+
+@media (max-width:768px){
+    .login-container{
+        width: 75vw;
+        height: 75vh;
+    }
+}
+
+@media (max-width:480px){
+    .login-container{
+        width: 100vw;
+        height: 100vh;
+        box-shadow: none;
+    }
+}
+.main{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mobile-text{
+    display: none;
+}
+@media (max-width:768px){
+    .mobile-text{
+        display: block;
+    }
+    .mobile-text a {
+        font-weight: 900;
+        color: inherit;
+    }
+}
+
+/* toda a sobreposição do formulario */
+/* .overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 40px;
+    background-color: var(--primary-color);
+    transition: 1s;
+} */
+
+.login-container.move .overlay:nth-child(2) {
+    z-index: -1;
+    opacity: 0;
+}
+
+.overlay-container{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    color: var(--text-color-light);
+    text-align: center;
+    transform: translateX(100%);
+    z-index: 10;
+    transition: 1s;
+}
+
+.login-container.move .overlay-container{
+    transform: translateX(0%);
 }

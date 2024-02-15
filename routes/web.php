@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 //Rota página inicial
 route::get('/', [mainController::class, 'index'] );
 
-//Rota login
+//Rota login Cliente
 route::get('/login', [loginController::class, 'index']);
 
 
@@ -31,3 +31,6 @@ route::get('/cardapio', [mainController::class, 'cardapio']);
 
 //Rota bebida
 route::get('/bebida' ,[mainController::class,'bebida']);
+
+//Rota login Painel
+route::get('/painel/login', [loginController::class, 'loginPainel']);
