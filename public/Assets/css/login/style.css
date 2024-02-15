@@ -10,9 +10,6 @@
 
 /* body */
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
     font-family: 'Red Hat Display', sans-serif;
 }
 
@@ -65,7 +62,7 @@ a{
 .form-input-container{
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    /* gap: 10px; */
 }
 
 .form-input{

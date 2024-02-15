@@ -20,4 +20,3 @@ Além da parte de Delivery ele também possui um sistema de gerenciamento de ent
 - [@cristian.kreuz.engel](https://github.com/CristianKreuzEngel)
 - [@carlos_orlandijr](https://github.com/Luiz-Carlos-Orlandi-Junior)
 - [@i_joaovitor_](https://github.com/if-jovi)
-

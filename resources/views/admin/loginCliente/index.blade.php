@@ -48,7 +48,7 @@
                             <i class="fab fa-linkedin-in"></i>
                         </a>
                     </div> -->
-                    <p class="form-text">ou cadastre seu email</p>
+                    <p class="form-text">Cadastre seu email</p>
                     <div class="form-input-container">
                         <input type="text" class="form-input" placeholder="Nome">
                         <input type="email" class="form-input" placeholder="Email">
@@ -74,5 +74,5 @@
                 </div>
             </div>
         </div>
-    </main>
+</main>
 @endsection
