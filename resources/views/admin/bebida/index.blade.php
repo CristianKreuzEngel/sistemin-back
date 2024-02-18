@@ -1,138 +1,51 @@
 @extends('layouts.app')
 
+
+@section('head')
+    <link rel="stylesheet" href="{{ asset('assets/css/telabebida/style.css')}}">
+@endsection
 @section('title', 'Bebidas')
 
 @section('content')
 <body>
-    <div class="container">
-        <h1>Menu de Bebidas</h1>
+        <div class="header">
+            <div class="center">
+                <img src="{{asset('assets/img/logo.jpeg')}}">
+            </div><!--center-->
+        </div><!--header-->
+
+        <div class="container-banner">
+            <div class="center">
+                <img src="{{asset('assets/img/imgtelabebida/banner-bebida.jpg')}}" >
+            </div><!--center-->
+        </div><!--container-banner-->
+
+        <div class="coluna">    
+            <div class ="center">
+                <div class="bebidas">
+                    <div class="bebida">
+                        <img src="{{asset('assets/img/imgtelabebida/coca2l.jpg')}}" alt="Coca-Cola 2L">
+                        <h2>Coca Cola 2L</h2>
+                        <p>Preço: R$10,00</p>
+                        <button>Adiciona ao Carrinho</button>
+                    </div><!--bebida1-->
+
+                    <div class="bebida">
+                        <img src="{{asset('assets/img/imgtelabebida/Coca-cola-zero-2l.jpg')}}" alt="Coca-Cola 2L">
+                        <h2>Coca Cola Zero 2L</h2>
+                        <p>Preço: R$10,00</p>
+                        <button>Adiciona ao Carrinho</button>
+                    </div><!--bebida2-->
+
+                    <div class="bebida">
+                        <img src="{{asset('assets/img/imgtelabebida/fanta-laranja2l.webp')}}" alt="Coca-Cola 2L">
+                        <h2>Coca Cola Zero 2L</h2>
+                        <p>Preço: R$10,00</p>
+                        <button>Adiciona ao Carrinho</button>
+                    </div><!--bebida3-->
+                </div><!--bebidas-->
+            </div><!--center-->
+        </div><!--coluna-->        
         
-        <div class="bebida">
-            <img src="caminho/para/imagem.jpg" alt="Nome da Bebida">
-            <h2>Bebida 1</h2>
-            <p>Descrição da bebida 1.</p>
-            <p>Preço: R$10,00</p>
-        </div>
-
-        <div class="bebida">
-            <img src="caminho/para/imagem.jpg" alt="Nome da Bebida">
-            <h2>Bebida 2</h2>
-            <p>Descrição da bebida 2.</p>
-            <p>Preço: R$8,00</p>
-        </div>
-        
-        <div class="bebida">
-            <img src="caminho/para/imagem.jpg" alt="Nome da Bebida">
-            <h2>Bebida 3</h2>
-            <p>Descrição da bebida 1.</p>
-            <p>Preço: R$10,00</p>
-        </div>
-
-        <div class="bebida">
-            <img src="caminho/para/imagem.jpg" alt="Nome da Bebida">
-            <h2>Bebida 4</h2>
-            <p>Descrição da bebida 2.</p>
-            <p>Preço: R$8,00</p>
-        </div>
-
-        <div class="bebida">
-            <img src="caminho/para/imagem.jpg" alt="Nome da Bebida">
-            <h2>Bebida 5</h2>
-            <p>Descrição da bebida 1.</p>
-            <p>Preço: R$10,00</p>
-        </div>
-
-        <div class="bebida">
-            <img src="caminho/para/imagem.jpg" alt="Nome da Bebida">
-            <h2>Bebida 6</h2>
-            <p>Descrição da bebida 2.</p>
-            <p>Preço: R$8,00</p>
-        </div>
-
-        <div class="bebida">
-            <img src="caminho/para/imagem.jpg" alt="Nome da Bebida">
-            <h2>Bebida 7</h2>
-            <p>Descrição da bebida 2.</p>
-            <p>Preço: R$8,00</p>
-        </div>
-
-        <div class="bebida">
-            <img src="caminho/para/imagem.jpg" alt="Nome da Bebida">
-            <h2>Bebida 8</h2>
-            <p>Descrição da bebida 2.</p>
-            <p>Preço: R$8,00</p>
-        </div>
-
-        <div class="bebida">
-            <img src="caminho/para/imagem.jpg" alt="Nome da Bebida">
-            <h2>Bebida 9</h2>
-            <p>Descrição da bebida 2.</p>
-            <p>Preço: R$8,00</p>
-        </div>
-
-        <div class="bebida">
-            <img src="caminho/para/imagem.jpg" alt="Nome da Bebida">
-            <h2>Bebida 1</h2>
-            <p>Descrição da bebida 1.</p>
-            <p>Preço: R$10,00</p>
-        </div>
-
-        <div class="bebida">
-            <img src="caminho/para/imagem.jpg" alt="Nome da Bebida">
-            <h2>Bebida 1</h2>
-            <p>Descrição da bebida 1.</p>
-            <p>Preço: R$10,00</p>
-        </div>
-
-        <div class="bebida">
-            <img src="caminho/para/imagem.jpg" alt="Nome da Bebida">
-            <h2>Bebida 1</h2>
-            <p>Descrição da bebida 1.</p>
-            <p>Preço: R$10,00</p>
-        </div>
-
-        <div class="bebida">
-            <img src="caminho/para/imagem.jpg" alt="Nome da Bebida">
-            <h2>Bebida 1</h2>
-            <p>Descrição da bebida 1.</p>
-            <p>Preço: R$10,00</p>
-        </div>
-
-        <div class="bebida">
-            <img src="caminho/para/imagem.jpg" alt="Nome da Bebida">
-            <h2>Bebida 1</h2>
-            <p>Descrição da bebida 1.</p>
-            <p>Preço: R$10,00</p>
-        </div>
-
-        <div class="bebida">
-            <img src="caminho/para/imagem.jpg" alt="Nome da Bebida">
-            <h2>Bebida 1</h2>
-            <p>Descrição da bebida 1.</p>
-            <p>Preço: R$10,00</p>
-        </div>
-
-        <div class="bebida">
-            <img src="caminho/para/imagem.jpg" alt="Nome da Bebida">
-            <h2>Bebida 1</h2>
-            <p>Descrição da bebida 1.</p>
-            <p>Preço: R$10,00</p>
-        </div>
-
-        <div class="bebida">
-            <img src="caminho/para/imagem.jpg" alt="Nome da Bebida">
-            <h2>Bebida 1</h2>
-            <p>Descrição da bebida 1.</p>
-            <p>Preço: R$10,00</p>
-        </div>
-
-        <div class="bebida">
-            <img src="caminho/para/imagem.jpg" alt="Nome da Bebida">
-            <h2>Bebida 1</h2>
-            <p>Descrição da bebida 1.</p>
-            <p>Preço: R$10,00</p>
-        </div>
-
-    </div>
 </body>
 @endsection

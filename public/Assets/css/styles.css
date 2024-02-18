@@ -631,3 +631,7 @@ footer .container p{
         font-size: 14px; 
      }
 }
+
+.piroca > h1{
+    text-align: center;
+}
