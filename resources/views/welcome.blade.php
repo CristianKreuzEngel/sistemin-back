@@ -165,7 +165,7 @@
         <footer>
             <div class="container">
                 <img src="{{ asset('assets/img/logo.jpeg')}}" alt="">
-                <p class="text-pq">Copyright 2023  <span class="color-laranja">Pizzaria Degustar</span> All Rights Reserved</p>
+                <p class="text-pq">Copyright 2023  <span class="color-laranja">Pizzaria Degustar</span> Todos os direitos reservados</p>
                 <p class="text-pq">Tel: (49) 98878-6633</p>
                 <p class="text-pq">Desenvolvido por KirlianByte</p>
             </div>
