@@ -21,4 +21,8 @@ class mainController extends Controller
     public function bebida(){
         return view('admin/bebida/index');
     }
+
+    public function motoboy(){
+        return view('admin/motoboy/index');
+    }
 }
