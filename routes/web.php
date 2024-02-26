@@ -36,4 +36,4 @@ route::get('/bebida' ,[mainController::class,'bebida']);
 route::get('/painel/login', [loginController::class, 'loginPainel']);
 
 //Rota motoboy
-route::get('/motoboy' ,[mainController::class,'motoboy']);
+route::get('/painel/motoboy' ,[mainController::class,'motoboy']);

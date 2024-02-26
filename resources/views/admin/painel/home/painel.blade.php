@@ -72,7 +72,7 @@
                     <h3>Configurações</h3>
                 </a>
                 <a href="#">
-                    <span class="material-icons-sharp">
+                    <span class="material-icons-sharp"> 
                         add
                     </span>
                     <h3>Novo Login</h3>

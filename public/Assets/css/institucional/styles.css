@@ -6,6 +6,9 @@
     --text-color-light: #fff;
     --icon-color: #F3F3F3;
 }
+body{
+    background-color: #000;
+}
 .max-widht {
     width: 100%;
     min-height: 100vh;
@@ -71,16 +74,16 @@
 }
 
 .color-cinza-1 {
-    color: #2b2b2b;
+    color: #e7e2e2;
 }
 
 .color-cinza-2 {
-    color: #545454;
+    color: #ffffff;
 }
 
 /* Chamada */
 
-.call {
+.call { 
     display: flex;
     align-items: center;
     margin-top: 120px;
@@ -175,7 +178,7 @@ img {
 
 .desktop-menu ul li a {
     text-decoration: none;
-    color: #545454;
+    color: #e7e2e2;
     font-size: 18px;
 }
 
@@ -216,7 +219,7 @@ img {
     .mobile-menu ul li a{
         text-decoration: none;
         font-weight: 600;
-        color: #2b2b2b;
+        color: #e7e2e2;
     }
 
     .mobile-menu ul li a:hover{
@@ -230,7 +233,7 @@ img {
     bottom: 2px;
     right: 10px;
     padding: 5px 10px;
-    background: #2b2b2b;
+    background: #e7e2e2;
 }
 /* home */
 
@@ -293,7 +296,7 @@ img {
 /* Serviços */
 
 #service .box i {
-    border: 4px solid #2b2b2b;
+    border: 4px solid #e7e2e2;
     border-radius: 30px;
     padding: 30px;
     margin-top: 10px;
