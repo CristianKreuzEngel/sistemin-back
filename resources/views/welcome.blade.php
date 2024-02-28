@@ -44,17 +44,6 @@
             </div>
         </div>
     </header>
-    <script>
-        // Menu Mobile
-        function menuMobile(){
-            var x = document.getElementById("myLinks")
-            if(x.style.display === "block"){
-                x.style.display = "none"
-            }else{
-                x.style.display = "block"
-            }
-        }
-     </script>
 @endsection
 @section('content')
     
@@ -108,9 +97,7 @@
             </div>
         </div>
       </section>
-
       <!--menu-->
-
       <section class="max-width bg" id="menu">
         <div class="container">
             <div class="content">
@@ -168,9 +155,9 @@
                 <p class="text-pq">Copyright 2023  <span class="color-laranja">Pizzaria Degustar</span> Todos os direitos reservados</p>
                 <p class="text-pq">Tel: (49) 98878-6633</p>
                 <p class="text-pq">Desenvolvido por KirlianByte</p>
-            </div>
+            </div>  
         </footer>
 @endsection
 @section('script')
-
+        <script src="{{asset('assets/js/index.js')}}"
 @endsection
