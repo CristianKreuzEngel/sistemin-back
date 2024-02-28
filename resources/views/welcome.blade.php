@@ -9,7 +9,7 @@
 <header class="max-width bg" id="home">
         <div class="container">
             <div class="menu">
-                <div class="logo"></div>
+                <div class="logo" id="logo"></div>
                 <div class="desktop-menu">
                     <ul>
                         <li><a href="#home">Home</a></li>
@@ -21,7 +21,7 @@
                 </div>
 
                 <div class="mobile-menu" >
-                    <i class="fa-solid fa-bars" onclick="menuMobile()"></i>
+                    <i class="fa-solid fa-bars" id="botao" onclick="menuMobile()"></i>
                     <div class="mobile-menu-op" id="opMenu">
                         <ul>
                             <li><a href="#home">Home</a></li>
@@ -47,17 +47,6 @@
             </div>
         </div>
     </header>
-    <script>
-        // Menu Mobile
-        function menuMobile(){
-            let auxMenu = document.getElementById("opMenu")
-            if(auxMenu.style.display === "none"){
-                auxMenu.style.display = "block"
-            }else{  
-                auxMenu.style.display = "none"
-            }
-        }
-    </script>
 @endsection
 @section('content')
      <!--about-->
@@ -167,4 +156,26 @@
                 <p class="text-pq">Desenvolvido por KirlianByte</p>
             </div>  
         </footer>
+@endsection
+@section('script')
+<script>
+        // Menu Mobile
+        function menuMobile(){
+            let auxMenu = document.getElementById("opMenu")
+            let imgLogo = document.getElementById("logo")
+            let btn = document.getElementById("botao")
+
+            if(auxMenu.style.display === "none"){
+                auxMenu.style.display = "block"
+                imgLogo.style.display = "none"
+                btn.className = "fa-solid fa-xmark"
+                btn.style.color = "#000"
+            }else{  
+                auxMenu.style.display = "none"
+                imgLogo.style.display = "block"
+                btn.className = "fa-solid fa-bars"
+                btn.style.color = "#e7e2e2"
+            }
+        }
+    </script>
 @endsection

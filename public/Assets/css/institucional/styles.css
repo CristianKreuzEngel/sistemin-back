@@ -196,7 +196,9 @@ img {
     background: #fff;
     display: none;
 } 
-
+.mobile-menu-op{
+    display: none;
+}
 .mobile-menu i{
     position: absolute;
     right: 25px;
@@ -206,7 +208,6 @@ img {
     color: #e7e2e2;
 }
 .mobile-menu ul{
-    /* display: block; */
     text-align: center;
 }
 
@@ -218,7 +219,7 @@ img {
 .mobile-menu ul li a{
     text-decoration: none;
     font-weight: 600;
-    color: #e7e2e2;
+    color: #000;
 }
 
 .mobile-menu ul li a:hover{
