@@ -31,12 +31,3 @@ Orders.forEach(order => {
     tr.innerHTML = trContent;
     document.querySelector('table tbody').appendChild(tr);
 });
-// Menu Mobile
-function menuMobile(){
-    var x = document.getElementById("myLinks")
-    if(x.style.display === "block"){
-         x.style.display = "none"
-    }else{
-        x.style.display = "block"
-        }
-}

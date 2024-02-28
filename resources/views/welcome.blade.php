@@ -20,17 +20,20 @@
                     </ul>
                 </div>
 
-                <div class="mobile-menu" onclick="menuMobile()">
-                    <i class="fa-solid fa-bars"></i>
-                    <ul id="mylinks">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">Sobre</a></li>
-                        <li><a href="#service">Serviços</a></li>
-                        <li><a href="#menu">Menu</a></li>
-                        <li><a href="#contact">Reservas</a></li>
-                    </ul>
+                <div class="mobile-menu" >
+                    <i class="fa-solid fa-bars" onclick="menuMobile()"></i>
+                    <div class="mobile-menu-op" id="opMenu">
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">Sobre</a></li>
+                            <li><a href="#service">Serviços</a></li>
+                            <li><a href="#menu">Menu</a></li>
+                            <li><a href="#contact">Reservas</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
+
             <div class="call">
                 <div class="left">
                     <img src="{{ asset('assets/img/pizzaD.png')}}" alt="">
@@ -44,13 +47,20 @@
             </div>
         </div>
     </header>
+    <script>
+        // Menu Mobile
+        function menuMobile(){
+            let auxMenu = document.getElementById("opMenu")
+            if(auxMenu.style.display === "none"){
+                auxMenu.style.display = "block"
+            }else{  
+                auxMenu.style.display = "none"
+            }
+        }
+    </script>
 @endsection
 @section('content')
-    
-    
-
      <!--about-->
-
      <section class="max-width bg" id="about">
         <div class="container">
             <div class="call">
@@ -157,7 +167,4 @@
                 <p class="text-pq">Desenvolvido por KirlianByte</p>
             </div>  
         </footer>
-@endsection
-@section('script')
-        <script src="{{asset('assets/js/index.js')}}"
 @endsection
