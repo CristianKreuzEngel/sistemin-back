@@ -14,6 +14,14 @@ class mainController extends Controller
         return view('admin/painel/home/painel');
     }
 
+    public function painelAnalise(){
+        return view('admin/painel/analise/painel');
+    }
+
+    public function painelPedido(){
+        return view('admin/painel/pedido/painel');
+    }
+
     public function cardapio(){
         return view('admin/cardapio/index');
     }

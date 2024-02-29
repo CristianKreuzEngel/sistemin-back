@@ -427,7 +427,7 @@ main .recent-orders a{
     width: 11rem;
     height: auto;
     margin-bottom: 0.8rem;
-    border-radius: 50%;
+    border-radius: 10px;
 }
 
 .right-section .user-profile h2{
