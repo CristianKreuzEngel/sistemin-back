@@ -40,7 +40,7 @@
                     </span>
                     <h3>Historico</h3>
                 </a>
-                <a href="#" class="active">
+                <a href="#">
                     <span class="material-icons-sharp">
                         insights
                     </span>
@@ -71,17 +71,17 @@
                     </span>
                     <h3>Configurações</h3>
                 </a>
-                <a href="#">
+                <a href="#" class="active">
                     <span class="material-icons-sharp">
-                        add
+                        wine_bar
                     </span>
-                    <h3>Novo Login</h3>
+                    <h3>Cadastro Bebidas</h3>
                 </a>
                 <a href="#">
                     <span class="material-icons-sharp">
                         add
                     </span>
-                    <h3>Cadastro Bebida</h3>
+                    <h3>Novo Login</h3>
                 </a>
                 <a href="#">
                     <span class="material-icons-sharp">
@@ -95,106 +95,48 @@
 
         <!-- Main -->
         <main>
-            <h1>Analises</h1>
-            <!-- Analises -->
-            <div class="analyse">
-                <div class="sales">
-                    <div class="status">
-                        <div class="info">
-                            <h3>Valor das Vendas</h3>
-                            <h1>$65,024</h1>
-                        </div>
-                        <div class="progresss">
-                            <svg>
-                                <circle cx="38" cy="38" r="36"></circle>
-                            </svg>
-                            <div class="percentage">
-                                <p>80</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="visits">
-                    <div class="status">
-                        <div class="info">
-                            <h3>Numero de Vendas</h3>
-                            <h1>24,981</h1>
-                        </div>
-                        <div class="progresss">
-                            <svg>
-                                <circle cx="38" cy="38" r="36"></circle>
-                            </svg>
-                            <div class="percentage">
-                                <p>48</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="searches">
-                    <div class="status">
-                        <div class="info">
-                            <h3>Numero de Pedidos</h3>
-                            <h1>14,147</h1>
-                        </div>
-                        <div class="progresss">
-                            <svg>
-                                <circle cx="38" cy="38" r="36"></circle>
-                            </svg>
-                            <div class="percentage">
-                                <p>21</p>
-                            </div>
-                        </div>
-                    </div>
+            <h1>Cadastro Bebidas</h1>
+            <!-- Cadastro Bebidas -->
+            <div class="caixa">
+                
+                <div class="cadastro">
+                    <form action="cadastrar-bebida.php" method="post">
+                        <label for="nome">Nome da Bebida:</label>
+                        <input id="nome" name="nome" required>
+                        <br/>
+                        <label for="categoria">Categoria:</label>
+                        <select id="categoria" name="categoria" required>
+                          <option value="">Selecione...</option>
+                          <option value="sucos">Sucos</option>
+                          <option value="refrigerantes">Refrigerantes</option>
+                          <option value="cervejas">Cervejas</option>
+                        </select>
+                
+                        <br/>
+                        <label for="imagem">Imagem:</label>
+                        <input type="file" id="imagem" name="imagem" accept="image/*">
+                        <br/>
+                        <label for="preco">Preço:</label>
+                        <input type="number" id="preco" name="preco" step="0.01" required>
+                        <br/>
+                        <label for="estoque">Estoque:</label>
+                        <input type="number" id="estoque" name="estoque" required>
+                        <br/>
+                        <label for="disponibilidade">Disponível:</label>
+                        <input type="checkbox" id="disponibilidade" name="disponibilidade" checked>
+                        <br/>
+                        <button type="submit">Salvar<br/button>
+                        <button type="submit">Cancelar<br/button>
+                        <button type="reset">Limpar<br/button>
+                
+                       
+                      </form>
                 </div>
             </div>
-            <!-- Final das Analises -->
+            
+            <!-- Final Cadastro Bebidas -->
 
-            <!-- Novos Usuarios -->
-            <div class="new-users">
-                <h2>Novos Usuarios</h2>
-                <div class="user-list">
-                    <div class="user">
-                        <img src="{{asset('assets/img/profile-2.jpg')}}">
-                        <h2>João</h2>
-                        <p>54 Min Ago</p>
-                    </div>
-                    <div class="user">
-                        <img src="{{asset('assets/img/profile-3.jpg')}}">
-                        <h2>Amilton</h2>
-                        <p>3 Hours Ago</p>
-                    </div>
-                    <div class="user">
-                        <img src="{{asset('assets/img/profile-4.jpg')}}">
-                        <h2>Luiz</h2>
-                        <p>6 Hours Ago</p>
-                    </div>
-                    <div class="user">
-                        <img src="{{asset('assets/img/plus.png')}}">
-                        <h2>Mais</h2>
-                        <p>Novo Usuario</p>
-                    </div>
-                </div>
-            </div>
-            <!-- Final de Novos Usuarios -->
-
-            <!-- Pedidos Recentes-->
-            <div class="recent-orders">
-                <h2>Pedidos Recentes</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Cliente</th>
-                            <th>Telefone</th>
-                            <th>Pagamento</th>
-                            <th>Status</th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody></tbody>
-                </table>
-                <a href="#">Mostre tudo</a>
-            </div>
-            <!-- Final dos Pedidos Recentes -->
+            
 
         </main>
         <!-- Final da main -->

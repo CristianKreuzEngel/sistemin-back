@@ -832,3 +832,53 @@ main .recent-orders a{
 .login-container.move .overlay-container{
     transform: translateX(0%);
 }
+
+/*Cadastro Bebida*/
+
+
+/* Formulário */
+main .caixa .cadastro{
+    font-size: 20px;
+    background-color: var(--color-white);
+    padding: var(--card-padding);
+    border-radius: var(--card-border-radius);
+    margin-top: 1rem;
+    box-shadow: var(--box-shadow);
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1.4rem;
+    transition: all 0.3s ease;
+}
+
+main .caixa .cadastro:hover{
+    box-shadow: none;
+}
+
+main .caixa .cadastro {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    /* justify-content: center; */
+}
+
+main .caixa input{
+    justify-content: space-around;
+    border-color: #000;
+    border: 2px solid;
+    border-radius:10px ;
+}
+
+main .caixa button{
+    margin-top: 15px;
+    margin-left: 15px;
+    margin-bottom: 10px;
+}
+
+main #estoque{
+    width: 257px;
+}
+
+main #preco{
+    width: 280px;
+}
