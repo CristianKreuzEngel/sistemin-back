@@ -9,7 +9,7 @@
 <header class="max-width bg" id="home">
         <div class="container">
             <div class="menu">
-                <div class="logo"></div>
+                <div class="logo" id="logo"></div>
                 <div class="desktop-menu">
                     <ul>
                         <li><a href="#home">Home</a></li>
@@ -20,17 +20,20 @@
                     </ul>
                 </div>
 
-                <div class="mobile-menu" onclick="menuMobile()">
-                    <i class="fa-solid fa-bars"></i>
-                    <ul id="mylinks">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">Sobre</a></li>
-                        <li><a href="#service">Serviços</a></li>
-                        <li><a href="#menu">Menu</a></li>
-                        <li><a href="#contact">Reservas</a></li>
-                    </ul>
+                <div class="mobile-menu" >
+                    <i class="fa-solid fa-bars" id="botao" onclick="menuMobile()"></i>
+                    <div class="mobile-menu-op" id="opMenu">
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">Sobre</a></li>
+                            <li><a href="#service">Serviços</a></li>
+                            <li><a href="#menu">Menu</a></li>
+                            <li><a href="#contact">Reservas</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
+
             <div class="call">
                 <div class="left">
                     <img src="{{ asset('assets/img/pizzaD.png')}}" alt="">
@@ -44,24 +47,9 @@
             </div>
         </div>
     </header>
-    <script>
-        // Menu Mobile
-        function menuMobile(){
-            var x = document.getElementById("myLinks")
-            if(x.style.display === "block"){
-                x.style.display = "none"
-            }else{
-                x.style.display = "block"
-            }
-        }
-     </script>
 @endsection
 @section('content')
-    
-    
-
      <!--about-->
-
      <section class="max-width bg" id="about">
         <div class="container">
             <div class="call">
@@ -108,9 +96,7 @@
             </div>
         </div>
       </section>
-
       <!--menu-->
-
       <section class="max-width bg" id="menu">
         <div class="container">
             <div class="content">
@@ -168,9 +154,28 @@
                 <p class="text-pq">Copyright 2023  <span class="color-laranja">Pizzaria Degustar</span> Todos os direitos reservados</p>
                 <p class="text-pq">Tel: (49) 98878-6633</p>
                 <p class="text-pq">Desenvolvido por KirlianByte</p>
-            </div>
+            </div>  
         </footer>
 @endsection
 @section('script')
+<script>
+        // Menu Mobile
+        function menuMobile(){
+            let auxMenu = document.getElementById("opMenu")
+            let imgLogo = document.getElementById("logo")
+            let btn = document.getElementById("botao")
 
+            if(auxMenu.style.display === "none"){
+                auxMenu.style.display = "block"
+                imgLogo.style.display = "none"
+                btn.className = "fa-solid fa-xmark"
+                btn.style.color = "#000"
+            }else{  
+                auxMenu.style.display = "none"
+                imgLogo.style.display = "block"
+                btn.className = "fa-solid fa-bars"
+                btn.style.color = "#e7e2e2"
+            }
+        }
+    </script>
 @endsection

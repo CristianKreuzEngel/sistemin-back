@@ -2,7 +2,7 @@
 
 @section('head')
  <link href="{{ asset('assets/css/painel/styles.css')}}" rel="stylesheet">
- <!-- <link  href="{{ asset('assets/css/login/style.css') }}" rel="stylesheet"> -->
+ 
 @endsection
 
 @section('title', 'Painel Administrativo')
