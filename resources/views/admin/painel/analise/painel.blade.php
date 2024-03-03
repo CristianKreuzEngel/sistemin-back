@@ -1,17 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layouts.app')
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
-    <link rel="stylesheet" href="/public/assets/css/estilo.css">
-    <title>Painel de Controle</title>
-</head>
+@section('head')
+ <link href="{{ asset('assets/css/painel/styles.css')}}" rel="stylesheet">
+@endsection
 
-<body>
+@section('title', 'Painel Administrativo')
 
-    <div class="container">
+@section('content')
+<div class="container">
         <!-- Sidebar -->
         <aside>
             <div class="toggle">
@@ -26,7 +22,7 @@
             </div>
 
             <div class="sidebar">
-                <a href="#">
+                <a href="{{route('painel.home')}}">
                     <span class="material-icons-sharp">
                         dashboard
                     </span>
@@ -44,7 +40,7 @@
                     </span>
                     <h3>Historico</h3>
                 </a>
-                <a href="#" class="active">
+                <a href="{{route('painel.analise')}}" class="active">
                     <span class="material-icons-sharp">
                         insights
                     </span>
@@ -55,13 +51,13 @@
                         mail_outline
                     </span>
                     <h3>Tickets</h3>
-                    <span class="message-count">27</span>
                 </a>
-                <a href="#">
+                <a href="{{route('painel.pedidos')}}">
                     <span class="material-icons-sharp">
                         inventory
                     </span>
-                    <h3>Lista Vendas</h3>
+                    <h3>Pedidos</h3>
+                    <span class="message-count">27</span>
                 </a>
                 <a href="#">
                     <span class="material-icons-sharp">
@@ -76,7 +72,7 @@
                     <h3>Configurações</h3>
                 </a>
                 <a href="#">
-                    <span class="material-icons-sharp">
+                    <span class="material-icons-sharp"> 
                         add
                     </span>
                     <h3>Novo Login</h3>
@@ -152,22 +148,22 @@
                 <h2>Novos Usuarios</h2>
                 <div class="user-list">
                     <div class="user">
-                        <img src="image/profile-2.jpg">
+                        <img src="{{asset('assets/img/profile-2.jpg')}}">
                         <h2>João</h2>
                         <p>54 Min Ago</p>
                     </div>
                     <div class="user">
-                        <img src="image/profile-3.jpg">
+                        <img src="{{asset('assets/img/profile-3.jpg')}}">
                         <h2>Amilton</h2>
                         <p>3 Hours Ago</p>
                     </div>
                     <div class="user">
-                        <img src="image/profile-4.jpg">
+                        <img src="{{asset('assets/img/profile-4.jpg')}}">
                         <h2>Luiz</h2>
                         <p>6 Hours Ago</p>
                     </div>
                     <div class="user">
-                        <img src="image/plus.png">
+                        <img src="{{asset('assets/img/plus.png')}}">
                         <h2>Mais</h2>
                         <p>Novo Usuario</p>
                     </div>
@@ -220,7 +216,7 @@
                         <small class="text-muted">Admin</small>
                     </div>
                     <div class="profile-photo">
-                        <img src="images/profile-1.jpg">
+                        <img src="{{asset('assets/img/profile-1.jpg')}}">
                     </div>
                 </div>
 
@@ -229,7 +225,7 @@
 
             <div class="user-profile">
                 <div class="logo">
-                    <img src="image/logo.png">
+                    <img src="{{asset('assets/img/logo.jpeg')}}">
                     <h2>Pizzaria Degustar</h2>
                 </div>
             </div>
@@ -295,9 +291,8 @@
 
 
     </div>
-
-    <script src="/public/assets/js/orders.js"></script>
-    <script src="/public/assets/js/index.js"></script>
-</body>
-
-</html>
+@endsection
+@section('script')
+<script src="/assets/js/orders.js"></script>
+<script src="/assets/js/index.js"></script>
+@endsection

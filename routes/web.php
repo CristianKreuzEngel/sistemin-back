@@ -16,24 +16,30 @@ use Illuminate\Support\Facades\Route;
 */
 
 //Rota página inicial
-route::get('/', [mainController::class, 'index'] );
+route::get('/', [mainController::class, 'index'] )->name('home');
 
 //Rota login Cliente
-route::get('/login', [loginController::class, 'index']);
+route::get('/login', [loginController::class, 'index'])->name('login.cliente');
 
 
-//Rota painel
-route::get ('/painel', [mainController::class, 'painel']);
+route::get('/painel/pedidos', [mainController::class, 'painelPedido'])->name('painel.pedidos');
 
 
-//Rota cardapio
-route::get('/cardapio', [mainController::class, 'cardapio']);
+// ---- ROTAS PAINEL ----
+//Rota painel home
+route::get ('/painel', [mainController::class, 'painel'])->name('painel.home');
 
-//Rota bebida
-route::get('/bebida' ,[mainController::class,'bebida']);
+//Rota painel analise
+route::get ('/painel/analise', [mainController::class, 'painelAnalise'])->name('painel.analise');
 
-//Rota login Painel
-route::get('/painel/login', [loginController::class, 'loginPainel']);
+//Rota painel cardapio
+route::get('/cardapio', [mainController::class, 'cardapio'])->name('painel.cardapio');
 
-//Rota motoboy
-route::get('/painel/motoboy' ,[mainController::class,'motoboy']);
+//Rota painel bebida
+route::get('/bebida' ,[mainController::class,'bebida'])->name('painel.bebida');
+
+//Rota painel login 
+route::get('/painel/login', [loginController::class, 'loginPainel'])->name('painel.login');
+
+//Rota painel motoboy
+route::get('/painel/motoboy' ,[mainController::class,'motoboy'])->name('painel.motoboy');

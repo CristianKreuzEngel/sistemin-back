@@ -19,7 +19,7 @@
             </div>
 
             <div class="sidebar">
-                <a href="{{route('painel.home')}}" class="active">
+                <a href="{{route('painel.home')}}">
                     <span class="material-icons-sharp">
                         dashboard
                     </span>
@@ -49,7 +49,7 @@
                     </span>
                     <h3>Tickets</h3>
                 </a>
-                <a href="{{route('painel.pedidos')}}">
+                <a href="{{route('painel.pedidos')}}" class="active">
                     <span class="material-icons-sharp">
                         inventory
                     </span>
@@ -73,12 +73,6 @@
                         add
                     </span>
                     <h3>Novo Login</h3>
-                </a>
-                <a href="#">
-                    <span class="material-icons-sharp">
-                        add
-                    </span>
-                    <h3>Cadastro Bebida</h3>
                 </a>
                 <a href="#">
                     <span class="material-icons-sharp">
@@ -115,7 +109,7 @@
                     <div class="status">
                         <div class="info">
                             <h3>Numero de Vendas</h3>
-                            <h1>24</h1>
+                            <h1>24,981</h1>
                         </div>
                         <div class="progresss">
                             <svg>
@@ -145,6 +139,34 @@
                 </div>
             </div>
             <!-- Final das Analises -->
+{{-- 
+            <!-- Novos Usuarios -->
+            <div class="new-users">
+                <h2>Novos Usuarios</h2>
+                <div class="user-list">
+                    <div class="user">
+                        <img src="{{asset('assets/img/profile-2.jpg')}}">
+                        <h2>João</h2>
+                        <p>54 Min Ago</p>
+                    </div>
+                    <div class="user">
+                        <img src="{{asset('assets/img/profile-3.jpg')}}">
+                        <h2>Amilton</h2>
+                        <p>3 Hours Ago</p>
+                    </div>
+                    <div class="user">
+                        <img src="{{asset('assets/img/profile-4.jpg')}}">
+                        <h2>Luiz</h2>
+                        <p>6 Hours Ago</p>
+                    </div>
+                    <div class="user">
+                        <img src="{{asset('assets/img/plus.png')}}">
+                        <h2>Mais</h2>
+                        <p>Novo Usuario</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Final de Novos Usuarios --> --}}
 
             <!-- Pedidos Recentes-->
             <div class="recent-orders">
@@ -164,6 +186,7 @@
                 <a href="{{route('painel.pedidos')}}">Mostre tudo</a>
             </div>
             <!-- Final dos Pedidos Recentes -->
+
         </main>
         <!-- Final da main -->
 
