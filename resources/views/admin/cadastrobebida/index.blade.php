@@ -11,6 +11,9 @@
         <!-- Sidebar -->
         <aside>
             <div class="toggle">
+                <div class="logo">
+                    <h2><span class="danger">Degustar</span></h2>
+                </div>
                 <div class="close" id="close-btn">
                     <span class="material-icons-sharp">
                         close
@@ -19,7 +22,7 @@
             </div>
 
             <div class="sidebar">
-                <a href="{{route('painel.home')}}" class="active">
+                <a href="#">
                     <span class="material-icons-sharp">
                         dashboard
                     </span>
@@ -37,7 +40,7 @@
                     </span>
                     <h3>Historico</h3>
                 </a>
-                <a href="{{route('painel.analise')}}">
+                <a href="#">
                     <span class="material-icons-sharp">
                         insights
                     </span>
@@ -48,13 +51,13 @@
                         mail_outline
                     </span>
                     <h3>Tickets</h3>
+                    <span class="message-count">27</span>
                 </a>
-                <a href="{{route('painel.pedidos')}}">
+                <a href="#">
                     <span class="material-icons-sharp">
                         inventory
                     </span>
-                    <h3>Pedidos</h3>
-                    <span class="message-count">27</span>
+                    <h3>Lista Vendas</h3>
                 </a>
                 <a href="#">
                     <span class="material-icons-sharp">
@@ -68,17 +71,17 @@
                     </span>
                     <h3>Configurações</h3>
                 </a>
-                <a href="#">
-                    <span class="material-icons-sharp"> 
-                        add
+                <a href="#" class="active">
+                    <span class="material-icons-sharp">
+                        wine_bar
                     </span>
-                    <h3>Novo Login</h3>
+                    <h3>Cadastro Bebidas</h3>
                 </a>
                 <a href="#">
                     <span class="material-icons-sharp">
                         add
                     </span>
-                    <h3>Cadastro Bebida</h3>
+                    <h3>Novo Login</h3>
                 </a>
                 <a href="#">
                     <span class="material-icons-sharp">
@@ -92,78 +95,49 @@
 
         <!-- Main -->
         <main>
-            <h1>BEM VINDO</h1>
-            <!-- Analises -->
-            <div class="analyse">   
-                <div class="sales">
-                    <div class="status">
-                        <div class="info">
-                            <h3>Valor das Vendas</h3>
-                            <h1>$65,024</h1>
-                        </div>
-                        <div class="progresss">
-                            <svg>
-                                <circle cx="38" cy="38" r="36"></circle>
-                            </svg>
-                            <div class="percentage">
-                                <p>80</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="visits">
-                    <div class="status">
-                        <div class="info">
-                            <h3>Numero de Vendas</h3>
-                            <h1>24</h1>
-                        </div>
-                        <div class="progresss">
-                            <svg>
-                                <circle cx="38" cy="38" r="36"></circle>
-                            </svg>
-                            <div class="percentage">
-                                <p>48</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="searches">
-                    <div class="status">
-                        <div class="info">
-                            <h3>Numero de Pedidos</h3>
-                            <h1>14,147</h1>
-                        </div>
-                        <div class="progresss">
-                            <svg>
-                                <circle cx="38" cy="38" r="36"></circle>
-                            </svg>
-                            <div class="percentage">
-                                <p>21</p>
-                            </div>
-                        </div>
-                    </div>
+            <h1>Cadastro Bebidas</h1>
+            <!-- Cadastro Bebidas -->
+            <div class="caixa">
+                
+                <div class="cadastro">
+                    <form action="cadastrar-bebida.php" method="post">
+                        <label for="nome">Nome da Bebida:</label>
+                        <input id="nome" name="nome" required>
+                        <br/>
+                        <label for="categoria">Categoria:</label>
+                        <select id="categoria" name="categoria" required>
+                          <option value="">Selecione...</option>
+                          <option value="sucos">Sucos</option>
+                          <option value="refrigerantes">Refrigerantes</option>
+                          <option value="cervejas">Cervejas</option>
+                        </select>
+                
+                        <br/>
+                        <label for="imagem">Imagem:</label>
+                        <input type="file" id="imagem" name="imagem" accept="image/*">
+                        <br/>
+                        <label for="preco">Preço:</label>
+                        <input type="number" id="preco" name="preco" step="0.01" required>
+                        <br/>
+                        <label for="estoque">Estoque:</label>
+                        <input type="number" id="estoque" name="estoque" required>
+                        <br/>
+                        <label for="disponibilidade">Disponível:</label>
+                        <input type="checkbox" id="disponibilidade" name="disponibilidade" checked>
+                        <br/>
+                        <button type="submit">Salvar<br/button>
+                        <button type="submit">Cancelar<br/button>
+                        <button type="reset">Limpar<br/button>
+                
+                       
+                      </form>
                 </div>
             </div>
-            <!-- Final das Analises -->
+            
+            <!-- Final Cadastro Bebidas -->
 
-            <!-- Pedidos Recentes-->
-            <div class="recent-orders">
-                <h2>Pedidos Recentes</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Cliente</th>
-                            <th>Telefone</th>
-                            <th>Pagamento</th>
-                            <th>Status</th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody></tbody>
-                </table>
-                <a href="{{route('painel.pedidos')}}">Mostre tudo</a>
-            </div>
-            <!-- Final dos Pedidos Recentes -->
+            
+
         </main>
         <!-- Final da main -->
 

@@ -32,8 +32,6 @@ route::get ('/painel', [mainController::class, 'painel'])->name('painel.home');
 //Rota painel analise
 route::get ('/painel/analise', [mainController::class, 'painelAnalise'])->name('painel.analise');
 
-
-
 //Rota painel cardapio
 route::get('/cardapio', [mainController::class, 'cardapio'])->name('painel.cardapio');
 
