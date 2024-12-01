@@ -10,6 +10,9 @@ import { AuthModule } from './auth/auth.module';
 import { ProductsModule } from './products/products.module';
 import { PayamentsModule } from './payaments/payaments.module';
 import { UsersProviders } from './users/entities/user.provider';
+import { SizeProviders } from './sizes/entities/size.provider';
+import { FlavorProviders } from './flavors/entities/flavor.provider';
+import { CustomerProviders } from './customers/entities/customer.provider';
 
 @Module({
   imports: [
@@ -23,6 +26,12 @@ import { UsersProviders } from './users/entities/user.provider';
     PayamentsModule,
   ],
   controllers: [AppController],
-  providers: [...databaseProviders, ...UsersProviders],
+  providers: [
+    ...databaseProviders,
+    ...UsersProviders,
+    ...SizeProviders,
+    ...FlavorProviders,
+    ...CustomerProviders,
+  ],
 })
 export class AppModule {}

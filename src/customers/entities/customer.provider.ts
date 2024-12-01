@@ -1,6 +1,6 @@
 import { Customer } from './customer.entity';
 
-export const customerProvider = [
+export const CustomerProviders = [
   {
     provide: 'CUSTOMERS_PROVIDER',
     useValue: Customer,

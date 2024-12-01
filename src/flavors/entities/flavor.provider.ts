@@ -1,6 +1,6 @@
 import { Flavor } from './flavor.entity';
 
-export const FlavorProvider = [
+export const FlavorProviders = [
   {
     provide: 'FLAVORS_REPOSITORY',
     useValue: Flavor,

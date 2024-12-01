@@ -1,26 +1,38 @@
-import { Injectable } from '@nestjs/common';
+import { Inject, Injectable, NotFoundException } from '@nestjs/common';
 import { CreateSizeDto } from './dto/create-size.dto';
 import { UpdateSizeDto } from './dto/update-size.dto';
+import { Size } from './entities/size.entity';
 
 @Injectable()
 export class SizesService {
-  create(createSizeDto: CreateSizeDto) {
-    return 'This action adds a new size';
+  constructor(
+    @Inject('SIZES_REPOSITORY') private sizesRepository: typeof Size,
+  ) {}
+  async create(createSizeDto: CreateSizeDto) {
+    return await this.sizesRepository.create(createSizeDto);
   }
 
-  findAll() {
-    return `This action returns all sizes`;
+  async findAll() {
+    return await this.sizesRepository.findAll();
   }
 
-  findOne(id: number) {
-    return `This action returns a #${id} size`;
+  async findOne(id: number) {
+    return await this.sizesRepository.findByPk(id);
   }
 
-  update(id: number, updateSizeDto: UpdateSizeDto) {
-    return `This action updates a #${id} size`;
+  async update(id: number, updateSizeDto: UpdateSizeDto) {
+    const size = await this.sizesRepository.findByPk(id);
+    if (!size) {
+      throw new NotFoundException('Tamanho não encontrado!');
+    }
+    return await this.sizesRepository.update(updateSizeDto, { where: { id } });
   }
 
-  remove(id: number) {
-    return `This action removes a #${id} size`;
+  async remove(id: number) {
+    const size = await this.sizesRepository.findByPk(id);
+    if (!size) {
+      throw new NotFoundException('Tamanho não encontrado!');
+    }
+    return await this.sizesRepository.destroy({ where: { id } });
   }
 }

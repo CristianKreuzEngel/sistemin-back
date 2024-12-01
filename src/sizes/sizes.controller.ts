@@ -1,4 +1,12 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
+import {
+  Controller,
+  Get,
+  Post,
+  Body,
+  Patch,
+  Param,
+  Delete,
+} from '@nestjs/common';
 import { SizesService } from './sizes.service';
 import { CreateSizeDto } from './dto/create-size.dto';
 import { UpdateSizeDto } from './dto/update-size.dto';
@@ -7,27 +15,27 @@ import { UpdateSizeDto } from './dto/update-size.dto';
 export class SizesController {
   constructor(private readonly sizesService: SizesService) {}
 
-  @Post()
+  @Post('create-size')
   create(@Body() createSizeDto: CreateSizeDto) {
     return this.sizesService.create(createSizeDto);
   }
 
-  @Get()
+  @Get('get-all')
   findAll() {
     return this.sizesService.findAll();
   }
 
-  @Get(':id')
+  @Get('get-size/:id')
   findOne(@Param('id') id: string) {
     return this.sizesService.findOne(+id);
   }
 
-  @Patch(':id')
+  @Patch('update-size/:id')
   update(@Param('id') id: string, @Body() updateSizeDto: UpdateSizeDto) {
     return this.sizesService.update(+id, updateSizeDto);
   }
 
-  @Delete(':id')
+  @Delete('delete-size/:id')
   remove(@Param('id') id: string) {
     return this.sizesService.remove(+id);
   }
