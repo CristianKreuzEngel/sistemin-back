@@ -8,11 +8,12 @@ import { CustomersModule } from './customers/customers.module';
 import { PurchasesModule } from './purchases/purchases.module';
 import { AuthModule } from './auth/auth.module';
 import { ProductsModule } from './products/products.module';
-import { PayamentsModule } from './payaments/payaments.module';
+import { PaymentsModule } from './payments/payments.module';
 import { UsersProviders } from './users/entities/user.provider';
 import { SizeProviders } from './sizes/entities/size.provider';
 import { FlavorProviders } from './flavors/entities/flavor.provider';
 import { CustomerProviders } from './customers/entities/customer.provider';
+import { PaymentProvider } from './payments/entities/payment.provider';
 
 @Module({
   imports: [
@@ -23,7 +24,7 @@ import { CustomerProviders } from './customers/entities/customer.provider';
     PurchasesModule,
     AuthModule,
     ProductsModule,
-    PayamentsModule,
+    PaymentsModule,
   ],
   controllers: [AppController],
   providers: [
@@ -32,6 +33,7 @@ import { CustomerProviders } from './customers/entities/customer.provider';
     ...SizeProviders,
     ...FlavorProviders,
     ...CustomerProviders,
+    ...PaymentProvider,
   ],
 })
 export class AppModule {}

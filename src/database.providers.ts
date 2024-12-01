@@ -4,7 +4,7 @@ import { User } from './users/entities/user.entity';
 import { Product } from './products/entities/product.entity';
 import { Customer } from './customers/entities/customer.entity';
 import { Flavor } from './flavors/entities/flavor.entity';
-import { Payament } from './payaments/entities/payament.entity';
+import { Payment } from './payments/entities/payment.entity';
 import { Purchase } from './purchases/entities/purchase.entity';
 import { Size } from './sizes/entities/size.entity';
 
@@ -27,7 +27,7 @@ export const databaseProviders = [
         Product,
         Customer,
         Flavor,
-        Payament,
+        Payment,
         Purchase,
         Size,
       ]);
