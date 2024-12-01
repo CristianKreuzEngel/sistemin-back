@@ -20,7 +20,7 @@ export class User extends Model<User> {
 
   @Column({
     type: DataType.STRING(255),
-
+    unique: true,
     allowNull: false,
   })
   login: string;
