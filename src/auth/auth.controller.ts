@@ -21,6 +21,11 @@ export class AuthController {
     return await this.authService.login(loginDto, res);
   }
 
+  @Post('make-login')
+  async makeLogin(@Body() loginDto: CreateAuthDto, @Res() res: Response) {
+    return await this.authService.makeLogin(loginDto, res);
+  }
+
   @Get('check-token')
   checkToken(@Req() req) {
     const token = req.cookies['access_token'];

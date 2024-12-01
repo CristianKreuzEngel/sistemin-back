@@ -1,26 +1,57 @@
-import { Injectable } from '@nestjs/common';
+import { Inject, Injectable, NotFoundException } from '@nestjs/common';
 import { CreateCustomerDto } from './dto/create-customer.dto';
 import { UpdateCustomerDto } from './dto/update-customer.dto';
+import { Customer } from './entities/customer.entity';
+import * as bcrypt from 'bcrypt';
 
 @Injectable()
 export class CustomersService {
-  create(createCustomerDto: CreateCustomerDto) {
-    return 'This action adds a new customer';
+  constructor(
+    @Inject('CUSTOMERS_PROVIDER') private customerRepository: typeof Customer,
+  ) {}
+
+  async validateCustomer(login: string, pass: string) {
+    const user = await this.customerRepository.findOne({
+      where: { phone: login },
+    });
+    if (user && (await bcrypt.compare(pass, user.password))) {
+      const { password, ...result } = user.get({ plain: true });
+      return result;
+    }
+    return null;
   }
 
-  findAll() {
-    return `This action returns all customers`;
+  async create(createCustomerDto: CreateCustomerDto) {
+    return await this.customerRepository.create(createCustomerDto);
   }
 
-  findOne(id: number) {
-    return `This action returns a #${id} customer`;
+  async findAll() {
+    return await this.customerRepository.findAll();
   }
 
-  update(id: number, updateCustomerDto: UpdateCustomerDto) {
-    return `This action updates a #${id} customer`;
+  async findOne(id: number) {
+    return await this.customerRepository.findOne({
+      where: {
+        id,
+      },
+    });
   }
 
-  remove(id: number) {
-    return `This action removes a #${id} customer`;
+  async update(id: number, updateCustomerDto: UpdateCustomerDto) {
+    const customer = await this.customerRepository.findByPk(id);
+    if (!customer) {
+      throw new NotFoundException('Cliente não encontrado');
+    }
+    return await this.customerRepository.update(updateCustomerDto, {
+      where: { id },
+    });
+  }
+
+  async remove(id: number) {
+    const customer = await this.customerRepository.findByPk(id);
+    if (!customer) {
+      throw new NotFoundException('Cliente não encontrado');
+    }
+    return await this.customerRepository.destroy({ where: { id: id } });
   }
 }

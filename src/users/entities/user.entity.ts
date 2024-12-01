@@ -4,9 +4,7 @@ import { Table, Column, Model, DataType } from 'sequelize-typescript';
 export class User extends Model<User> {
   @Column({
     type: DataType.INTEGER,
-
     autoIncrement: true,
-
     primaryKey: true,
   })
   id: number;
@@ -27,37 +25,31 @@ export class User extends Model<User> {
 
   @Column({
     type: DataType.STRING(255),
-
     allowNull: false,
   })
   password: string;
 
   @Column({
-    type: DataType.TINYINT,
-
+    type: DataType.BOOLEAN,
     allowNull: false,
-
-    defaultValue: 1,
+    defaultValue: true,
   })
   isActive: boolean;
 
   @Column({
     type: DataType.INTEGER,
-
     allowNull: false,
   })
   idRole: number;
 
   @Column({
     type: DataType.DATE,
-
     allowNull: false,
   })
   createdAt: string;
 
   @Column({
     type: DataType.DATE,
-
     allowNull: false,
   })
   updatedAt: string;

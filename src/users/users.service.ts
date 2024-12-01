@@ -10,7 +10,7 @@ export class UsersService {
     @Inject('USERS_REPOSITORY') private userRepository: typeof User,
   ) {}
 
-  async validateUser(login: string, pass: string): Promise<any> {
+  async validateUser(login: string, pass: string) {
     const user = await this.userRepository.findOne({ where: { login } });
     if (user && (await bcrypt.compare(pass, user.password))) {
       const { password, ...result } = user.get({ plain: true });

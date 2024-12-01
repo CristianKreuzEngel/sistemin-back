@@ -6,6 +6,4 @@ export class CreateUserDto {
   email: string;
   active: boolean;
   idRole: number;
-  firstLogin: boolean;
-  foto: string;
 }
