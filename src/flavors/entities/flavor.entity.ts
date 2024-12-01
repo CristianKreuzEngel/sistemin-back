@@ -19,6 +19,11 @@ export class Flavor extends Model<Flavor> {
     allowNull: false,
   })
   description: string;
+  @Column({
+    type: DataType.DECIMAL(10, 2),
+    allowNull: false,
+  })
+  price: number;
 
   @Column({
     type: DataType.BOOLEAN,
