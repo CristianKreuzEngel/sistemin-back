@@ -4,10 +4,12 @@ import { JwtModule } from '@nestjs/jwt';
 import { AuthService } from './auth.service';
 import { AuthController } from './auth.controller';
 import { UsersModule } from '../users/users.module';
+import {CustomersModule} from "../customers/customers.module";
 
 @Module({
   imports: [
     UsersModule,
+      CustomersModule,
     ConfigModule.forRoot(),
     JwtModule.registerAsync({
       imports: [ConfigModule],

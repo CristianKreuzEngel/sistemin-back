@@ -5,7 +5,7 @@ import { SizesModule } from './sizes/sizes.module';
 import { FlavorsModule } from './flavors/flavors.module';
 import { databaseProviders } from './database.providers';
 import { CustomersModule } from './customers/customers.module';
-import { PurchasesModule } from './purchases/purchases.module';
+//import { PurchasesModule } from './purchases/purchases.module';
 import { AuthModule } from './auth/auth.module';
 import { ProductsModule } from './products/products.module';
 import { PaymentsModule } from './payments/payments.module';
@@ -21,12 +21,11 @@ import { PaymentProvider } from './payments/entities/payment.provider';
     SizesModule,
     FlavorsModule,
     CustomersModule,
-    PurchasesModule,
     AuthModule,
     ProductsModule,
     PaymentsModule,
   ],
-  controllers: [AppController],
+  controllers: [],
   providers: [
     ...databaseProviders,
     ...UsersProviders,
